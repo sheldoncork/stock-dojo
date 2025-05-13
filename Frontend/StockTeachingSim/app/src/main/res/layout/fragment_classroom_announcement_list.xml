@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.classroom.announcements.AnnouncementListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/announcements_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="16dp"/>
+
+    <include
+        android:id="@+id/no_announcements_layout"
+        layout="@layout/layout_no_announcements"
+        android:visibility="gone"/>
+
+    <include
+        android:id="@+id/dialog_add_announcement"
+        layout="@layout/dialog_add_announcement"
+        android:visibility="gone"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

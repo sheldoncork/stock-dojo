@@ -1,0 +1,161 @@
+<resources>
+    <!--  Global  -->
+    <string name="app_name_text">Stock Dojo</string>
+
+    <!--  Auth Activity  -->
+    <string name="start_button">Get Started</string>
+    <string name="sign_up_button">Sign Up</string>
+    <string name="login_button">Log In</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+
+    <!--  Login Fragment  -->
+    <string name="forgot_password_button">Forgot Password?</string>
+
+    <!--  Registration Fragment  -->
+    <string name="email_address_hint">Email Address</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="account_type">Account Type</string>
+    <string name="standard_radio_button">Standard</string>
+    <string name="student_radio_button">Student</string>
+    <string name="teacher_radio_button">Teacher</string>
+
+    <!--  Forgot Password Fragment  -->
+    <string name="forgot_password_title">Reset Password</string>
+    <string name="send_code_button">Send Code</string>
+    <string name="code_expires_text">Code expires in: 10:00</string>
+    <string name="code_input_hint">Enter Code</string>
+    <string name="resend_code_button">Resend Code</string>
+    <string name="new_password_hint">New Password</string>
+    <string name="reset_password_button">Reset Password</string>
+
+    <!--  Bottom Navigation Bar  -->
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_classroom">Classrooms</string>
+    <string name="title_settings">Settings</string>
+
+    <!--  Toolbar items  -->
+    <string name="classroom_toolbar_settings_text">Settings</string>
+    <string name="classroom_toolbar_add_text">Add</string>
+    <string name="classroom_toolbar_delete_text">Delete</string>
+
+    <!--  Results Fragment  -->
+    <string name="user_dropdown_select">Select an option</string>
+
+    <!--  Transaction History Fragment  -->
+    <string name="transaction_history">Transaction History</string>
+    <string name="no_transactions_title">No Transactions</string>
+    <string name="no_transactions_subtitle">Once you make a transaction,\n it will show up here.</string>
+
+
+    <!--  Classroom Fragments  -->
+    <string name="temp_join_code">Join code: joinCode</string>
+    <string name="classroom_list_announcements_button_text">All announcements</string>
+    <string name="classroom_details_announcements_button_text">Announcements</string>
+
+    <!--  Create Classroom Fragment  -->
+    <string name="classroom_name_input_hint">My Classroom</string>
+    <string name="start_balance_input_hint">Start Balance (Default: $10000.00)</string>
+    <string name="start_balance_input_prefix">$</string>
+
+    <!--  Classroom Fragment Empty State  -->
+    <string name="temp_title">Title Placeholder</string>
+    <string name="temp_subtitle">subtitle placeholder</string>
+    <string name="join_code_input_hint">Join Code</string>
+    <string name="temp_button">Button Text</string>
+
+    <string name="classroom_title_standard">You are not a student</string>
+    <string name="classroom_subtitle_standard">Create a new account to become a student!</string>
+
+    <string name="no_classrooms_teacher_title">You have not created any classrooms yet</string>
+    <string name="no_classrooms_teacher_subtitle">Create a classroom to get started!</string>
+    <string name="create_classroom_button">Create Classroom</string>
+
+    <string name="no_classroom_student_title">You have not joined a classroom yet</string>
+    <string name="no_classroom_student_subtitle">Enter Class Code to join a classroom!</string>
+    <string name="no_classrooms_student_button">Join Classroom</string>
+
+    <string name="empty_classroom_student_title">You are the only student in this classroom</string>
+    <string name="empty_classroom_student_subtitle">Have more students join so you aren\'t alone!</string>
+
+    <string name="empty_classroom_teacher_title">There are no students in this classroom</string>
+    <string name="empty_classroom_teacher_subtitle">Tell your students to join this classroom!</string>
+
+    <!--  Classroom Item  -->
+    <string name="classroom_class_name">class name</string>
+    <string name="classroom_item_sub_text">sub text</string>
+    <string name="classroom_item_main_text">main text</string>
+
+    <!--  Manage Classroom Strings  -->
+    <string name="classroom_management_section">Classroom Management</string>
+    <string name="change_classroom_name_input_prefix">New class name</string>
+    <string name="change_classroom_name_button_text">Change Name</string>
+    <string name="student_management_section">Student Management</string>
+    <string name="add_student_input_prefix">Add Student</string>
+    <string name="add_student_button_text">Add</string>
+    <string name="remove_student_input_prefix">Remove Student</string>
+    <string name="remove_student_button_text">Remove</string>
+    <string name="delete_classroom">Delete Classroom</string>
+
+    <!--  Classroom Announcement Fragment  -->
+    <string name="no_announcements_title">No Announcements Yet</string>
+    <string name="no_announcements_student_subtitle">When your teacher makes an announcement,\nyou will see it here.</string>
+    <string name="no_announcements_teacher_subtitle">Create an Announcement for a class see it here.</string>
+
+
+    <!--  Announcement Item  -->
+    <string name="announcement_title_hint">Title</string>
+    <string name="announcement_content_hint">Content</string>
+    <string name="posted_time_stamp">Posted at 00:00 on 11–31–2024</string>
+    <string name="edited_time_stamp">Edited at 00:00 on 11–31–2024</string>
+    <string name="temp_content_preview">This is a temporary holder so the user can preview this announcement before clicking on it and reading the entire message attached to it…</string>
+    <string name="temp_content">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+    <string name="edit_announcement_btn_text">Edit</string>
+    <string name="delete_announcement_btn_text">Delete</string>
+
+    <!--  Classroom Chat Fragment  -->
+    <string name="open_classroom_chat_description">Open classroom chat</string>
+    <string name="send_message_content_description">Send message</string>
+    <string name="message_input_hint">Enter message</string>
+    <string name="temp_sender_name">Sent Name</string>
+    <string name="temp_received_name">Received Name</string>
+    <string name="temp_message_text">Message Text</string>
+    <string name="temp_message_time">00:00</string>
+
+    <!-- Student Portfolio Fragment  -->
+    <string name="stock_holdings">Stock Holdings</string>
+    <string name="value_0_00">Value: $0.00</string>
+    <string name="portfolio_cash_0_00">Portfolio Cash: $0.00</string>
+    <string name="no_socks">No socks to show</string>
+
+    <!--  Settings Fragment   -->
+    <string name="account_settings">Account Settings</string>
+    <string name="new_username_hint">New Username</string>
+    <string name="change_username_button">Change Username</string>
+
+    <string name="current_password_hint">Current Password</string>
+    <string name="change_password_button">Change Password</string>
+
+    <string name="delete_account_button">Delete Account</string>
+    <string name="dialog_delete_account_button">Permanently Delete</string>
+    <string name="appearance">Appearance</string>
+    <string name="theme">Theme</string>
+    <string name="system_default_radio_button">System default</string>
+    <string name="light_radio_button">Light</string>
+    <string name="dark_radio_button">Dark</string>
+    <string name="contrast">Contrast</string>
+    <string name="low_radio_button">Low</string>
+    <string name="medium_radio_button">Medium</string>
+    <string name="high_radio_button">High</string>
+    <string name="sign_out_button">Sign Out</string>
+
+    <!--  Dialog Strings  -->
+    <string name="cancel_button">Cancel</string>
+    <string name="portfolio_name">Portfolio Name</string>
+    <string name="market_news">Market News</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

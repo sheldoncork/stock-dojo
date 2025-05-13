@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardElevation="2dp"
+        style="@style/Widget.Material3.CardView.Filled">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/announcement_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:text="@string/temp_title"/>
+
+        <TextView
+            android:id="@+id/announcement_datetime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?android:textColorSecondary"
+            android:layout_marginBottom="4dp"
+            android:text="@string/posted_time_stamp"/>
+
+        <TextView
+            android:id="@+id/announcement_edited_datetime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="?android:textColorSecondary"
+            android:textStyle="italic"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            android:text="@string/edited_time_stamp"/>
+
+        <TextView
+            android:id="@+id/announcement_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/temp_content"/>
+
+        <TextView
+            android:id="@+id/announcement_classroomName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:layout_marginBottom="8dp"
+            android:text="@string/classroom_class_name"/>
+
+        <LinearLayout
+            android:id="@+id/teacher_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/edit_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="@string/edit_announcement_btn_text"
+                style="@style/Widget.Material3.Button.TonalButton"
+                />
+
+
+            <Button
+                android:id="@+id/delete_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="@string/delete_announcement_btn_text"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:textColor="?attr/colorError"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</ScrollView>

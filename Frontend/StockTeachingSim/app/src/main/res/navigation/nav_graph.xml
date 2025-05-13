@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeContainerFragment">
+
+    <!-- Main Bottom Navigation Destinations -->
+    <fragment
+        android:id="@+id/homeContainerFragment"
+        android:name="com.softdev.stocksim.ui.home.HomeContainerFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home_container" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.softdev.stocksim.ui.search.SearchFragment"
+        android:label="@string/title_search"
+        tools:layout="@layout/fragment_search">
+
+        <action
+            android:id="@+id/action_searchFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/searchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.softdev.stocksim.ui.search.ResultsFragment"
+        android:label="Results"
+        tools:layout="@layout/fragment_results">
+        <argument
+            android:name="portfolio"
+            app:argType="com.softdev.stocksim.ui.home.portfolio.PortfolioModel" />
+
+        <action
+            android:id="@+id/action_resultsFragment_to_newsFragment"
+            app:destination="@id/newsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.softdev.stocksim.ui.home.news.NewsFragment"
+        android:label="News"
+        tools:layout="@layout/fragment_news">
+        <argument
+            android:name="stockSymbol"
+            app:argType="string" />
+    </fragment>
+
+
+    <!-- Classroom Section -->
+    <fragment
+        android:id="@+id/classroomContainerFragment"
+        android:name="com.softdev.stocksim.ui.classroom.ClassroomContainerFragment"
+        android:label="@string/title_classroom"
+        tools:layout="@layout/fragment_classroom_container" />
+
+    <!-- Settings -->
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.softdev.stocksim.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_settings">
+
+        <action
+            android:id="@+id/action_settingsFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim">
+            <argument
+                android:name="isLoggedIn"
+                android:defaultValue="true"
+                app:argType="boolean" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.softdev.stocksim.auth.ForgotPasswordFragment"
+        android:label="Forgot Password"
+        tools:layout="@layout/fragment_forgot_password">
+        <argument
+            android:name="isLoggedIn"
+            app:argType="boolean" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/classroom_nav_graph"
+    app:startDestination="@id/classroomListFragment">
+
+    <fragment
+        android:id="@+id/classroomListFragment"
+        android:name="com.softdev.stocksim.ui.classroom.classrooms.list.ClassroomListFragment"
+        tools:layout="@layout/fragment_classroom_list">
+
+        <action
+            android:id="@+id/action_to_classroom_details"
+            app:destination="@id/classroomDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_to_announcement_list"
+            app:destination="@id/announcementListFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/classroomDetailsFragment"
+        android:name="com.softdev.stocksim.ui.classroom.classrooms.details.ClassroomDetailsFragment"
+        tools:layout="@layout/fragment_classroom_details">
+
+        <argument
+            android:name="classroomId"
+            app:argType="string" />
+        <argument
+            android:name="className"
+            app:argType="string" />
+        <argument
+            android:name="joinCode"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="isOnlyClassroom"
+            app:argType="boolean" />
+
+        <action
+            android:id="@+id/action_to_manage_classroom"
+            app:destination="@id/manageClassroomFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_to_announcement_list"
+            app:destination="@id/announcementListFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_to_classroom_chat"
+            app:destination="@id/classroomChatFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/action_to_student_portfolio"
+            app:destination="@id/studentPortfolioViewFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/manageClassroomFragment"
+        android:name="com.softdev.stocksim.ui.classroom.management.ManageClassroomTeacherFragment"
+        android:label="Classroom Settings"
+        tools:layout="@layout/fragment_classroom_manage">
+
+        <argument
+            android:name="classroomId"
+            app:argType="string" />
+        <argument
+            android:name="className"
+            app:argType="string" />
+        <argument
+            android:name="joinCode"
+            app:argType="string" />
+        <argument
+            android:name="isOnlyClassroom"
+            app:argType="boolean" />
+    </fragment>
+
+    <!-- Announcements Section -->
+    <fragment
+        android:id="@+id/announcementListFragment"
+        android:name="com.softdev.stocksim.ui.classroom.announcements.AnnouncementListFragment"
+        tools:layout="@layout/fragment_classroom_announcement_list">
+
+        <argument
+            android:name="fetchAll"
+            app:argType="boolean" />
+        <argument
+            android:name="classroomId"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="className"
+            app:argType="string"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_to_announcement_detail"
+            app:destination="@id/announcementDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/announcementDetailFragment"
+        android:name="com.softdev.stocksim.ui.classroom.announcements.AnnouncementDetailFragment"
+        tools:layout="@layout/fragment_classroom_announcement_details">
+
+        <argument
+            android:name="announcementId"
+            app:argType="long" />
+    </fragment>
+
+    <!-- Chat Section -->
+    <fragment
+        android:id="@+id/classroomChatFragment"
+        android:name="com.softdev.stocksim.ui.classroom.chat.ClassroomChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_classroom_chat">
+
+        <argument
+            android:name="classroomId"
+            app:argType="string" />
+        <argument
+            android:name="className"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/studentPortfolioViewFragment"
+        android:name="com.softdev.stocksim.ui.classroom.classrooms.details.portfolio.StudentPortfolioFragment">
+        <argument
+            android:name="studentName"
+            app:argType="string"/>
+        <argument
+            android:name="portfolioId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>

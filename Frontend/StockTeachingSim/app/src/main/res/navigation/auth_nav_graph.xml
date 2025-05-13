@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth_nav_graph"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.softdev.stocksim.auth.WelcomeFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_welcome">
+        <!--    popUpTo makes it so that the user can't get back to welcome after navigation    -->
+        <action
+            android:id="@+id/action_welcomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true"
+            app:popUpToSaveState="false" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/welcomeFragment"
+            app:popUpToInclusive="true"
+            app:popUpToSaveState="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.softdev.stocksim.auth.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"
+            app:popUpToSaveState="false">
+            <argument
+                android:name="isLoggedIn"
+                android:defaultValue="false"
+                app:argType="boolean" />
+        </action>
+        <!--    popUpTo makes it so that the user can't get back to welcome after navigation    -->
+        <action
+            android:id="@+id/action_loginFragment_to_registrationFragment"
+            app:destination="@id/registrationFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"
+            app:popUpToSaveState="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.softdev.stocksim.auth.RegistrationFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_registration">
+        <!--    popUpTo makes it so that the user can't get back to welcome after navigation    -->
+        <action
+            android:id="@+id/action_registrationFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/registrationFragment"
+            app:popUpToInclusive="true"
+            app:popUpToSaveState="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.softdev.stocksim.auth.ForgotPasswordFragment"
+        android:label="Reset Password"
+        tools:layout="@layout/fragment_forgot_password">
+        <!--    popUpTo makes it so that the user can't get back to welcome after navigation    -->
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/forgotPasswordFragment"
+            app:popUpToInclusive="true"
+            app:popUpToSaveState="false" />
+    </fragment>
+</navigation>

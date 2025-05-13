@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/empty_classroom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="24sp"
+        android:paddingBottom="24sp">
+
+        <include
+            android:id="@+id/empty_announcement_button_layout"
+            layout="@layout/view_announcement_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/classroom_details_announcements_button_text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/empty_classroom_title"
+            style="@style/TextAppearance.Material3.HeadlineLarge"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60sp"
+            android:text="@string/temp_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/empty_announcement_button_layout"
+            android:textAlignment="center"
+            android:textAppearance="?attr/textAppearanceHeadlineLarge"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/empty_classroom_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60sp"
+            android:text="@string/temp_subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/empty_classroom_title"
+            android:textAlignment="center"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            android:textColor="?attr/colorOnSurfaceVariant"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/empty_classroom_join_code_card"
+            style="@style/Widget.Material3.CardView.Elevated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60sp"
+            app:strokeColor="?attr/colorOutline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/empty_classroom_subtitle">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/empty_classroom_join_code_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16sp"
+                android:text="@string/temp_join_code"
+                android:textAppearance="?attr/textAppearanceBodyLarge" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/student_chat_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8sp"
+        android:contentDescription="@string/open_classroom_chat_description"
+        app:icon="@drawable/ic_chat"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

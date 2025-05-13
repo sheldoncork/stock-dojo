@@ -1,0 +1,50 @@
+[versions]
+agp = "8.6.1"
+glide = "4.16.0"
+gson = "2.10.1"
+highcharts = "6.1r"
+highchartsAndroid = "11.4.8.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+espressoContrib = "3.4.0"
+espressoIntents = "3.4.0"
+testRules = "1.0.2"
+testRunner = "1.0.2"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.9.3"
+constraintlayout = "2.2.0"
+volley = "1.2.1"
+preference = "1.2.1"
+navigation = "2.8.4"
+java-websocket = "1.5.7"
+splashscreen = "1.0.1"
+
+
+[libraries]
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+highcharts = { module = "com.highsoft.highcharts:highcharts", version.ref = "highcharts" }
+highcharts-android = { module = "com.github.highcharts:highcharts-android", version.ref = "highchartsAndroid" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+volley = {group = "com.android.volley", name="volley", version.ref = "volley"}
+preference = { group = "androidx.preference", name = "preference", version.ref = "preference" }
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigation" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigation" }
+java-websocket = { module = "org.java-websocket:Java-WebSocket", version.ref = "java-websocket" }
+splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashscreen" }
+test-rules = { group = "com.android.support.test", name = "rules", version.ref = "testRules" }
+test-runner = { group = "com.android.support.test", name = "runner", version.ref = "testRunner" }
+espresso-contrib = { group = "androidx.test.espresso", name = "espresso-contrib", version.ref = "espressoContrib" }
+espresso-intents = { group = "androidx.test.espresso", name = "espresso-intents", version.ref = "espressoIntents" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigation" }
